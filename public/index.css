@@ -1,0 +1,92 @@
+/*colors*/
+:root {
+    --white: #F0EAD2;
+    --light-brown: #A98467;
+    --dark-brown: #6C584C;
+    --grey-brown: #79675C;
+    --very-dark-brown: #2F2723;
+    --light-green: #DDE5B6;
+    --green: #ADC178;
+    --dark-green: #7B8F4B;
+}
+
+/*Main*/
+.indexBackgroundImage {
+    background-image: url(img/Dog_Cat_home_img_4.jpg);
+    background-size: cover;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: auto;
+}
+.IndexTitle {
+    font-weight: 900;
+    padding: 5vh 0;
+    font-size: min(10vw, 10vh);
+    text-align: center;
+    color: var(--white);
+}
+.mainUnorderedList {
+    gap: 0;
+    list-style-type: disc;
+    padding: 5vh 5vw;
+    padding-left: 7vw;
+    font-size: max(1.2vw, 2.5vh);
+}
+.mainTextTitle {
+    padding: 5vh;
+    padding-bottom: 0;
+    text-align: center;
+    font-size: 5vh;
+}
+.secondaryTextTitle {
+    padding: 5vh;
+    padding-left: 5vw;
+    padding-bottom: 0;
+    text-align: left;
+    font-size: 4vh;
+}
+.mainColor1 {
+    background-color: var(--green);
+}
+.mainColor2 {
+    background-color: var(--grey-brown);
+}
+.mainColor2 p {
+    color: var(--white);
+}
+.indexButtonsUl {
+    display: flex;
+    flex-direction: row;
+    list-style-type: none;
+    gap: 2.5vw;
+    margin: 0;
+    padding: 0 5vw 5vh;
+    width: 100%;
+}
+@media (max-width: 426px) {
+    .indexButtonsUl{
+        flex-direction: column;
+    }
+}
+.indexButtonsUl a {
+    display: flex;
+    color: var(--light-green);
+    padding: 8px 16px;
+    text-decoration: none;
+    border-radius:  15px;
+    background-color: var(--grey-brown);
+    width: 100%;
+}
+.indexButtonsUl a:hover {
+    background-color: var(--white);
+    color: var(--dark-brown);
+}
+.bibliography, .bibliography:hover {
+    padding: 0;
+    margin: 0;
+    background-color: var(--white);
+    width: auto;
+    color: var(--very-dark-brown);
+    font-style: italic;
+}

@@ -1,0 +1,152 @@
+/*Colors*/
+:root {
+    --white: #F0EAD2;
+    --light-brown: #A98467;
+    --dark-brown: #6C584C;
+    --grey-brown: #79675C;
+    --very-dark-brown: #2F2723;
+    --light-green: #DDE5B6;
+    --green: #ADC178;
+    --dark-green: #7B8F4B;
+}
+
+/*For browse.html*/
+#browseSection {
+    width: 100%;
+    padding: 10px;
+    display: flex;
+    flex-wrap: wrap;
+}
+.browseElement {
+    margin: 10px;
+    width: calc(33.3333% - 20px);
+    height: auto;
+    background-color: var(--light-green);
+    border-radius: 15px;
+    box-sizing: border-box;
+}
+.underConstructionImage {
+    width: 100%;
+    height: auto;
+}
+
+.browseElementHeader {
+    width: 100%;
+    text-align: center;
+    padding: 5px 0px;
+    background-color: var(--green);
+    border-radius: 15px 15px 0px 0px;
+    box-sizing: border-box;
+    display: flex;
+}
+.petName {
+    width: 40%;
+    font-size: max(1.2vw, 2.5vh);
+    color: var(--very-dark-brown);
+}
+.gender {
+    width: 60%;
+    /*flex alignment right*/
+    display: flex; /* Add this line */
+    justify-content: flex-end; /* Add this line */
+    align-items: center;
+    margin-right: 10px;
+}
+.genderIcon {
+    height: max(1.4vw, 3.0vh);
+    width: auto;
+    margin-left: auto;
+}
+.heartIcon {
+    height: max(1.4vw, 3.0vh);
+    width: auto;
+    margin-left: 10px;
+    /*position: relative;
+}
+.heartIcon::after {
+    content: "Interested?";
+    position: absolute;
+    bottom: 100%;
+    left: 50%;
+    transform: translateX(-50%);
+    background-color: #333;
+    color: #fff;
+    padding: 5px;
+    border-radius: 5px;
+    white-space: nowrap;
+    opacity: 0;
+    visibility: hidden;
+    transition: opacity 0.3s;
+    font-size: 0.8em;
+}
+.heartIcon:hover::after {
+    opacity: 1;
+    visibility: visible;*/
+}
+
+
+.browseElementBody {
+    display: flex;
+    width: 100%;
+    color: var(--very-dark-brown);
+    font-size: max(1vw, 2.2vh);
+}
+.isTheImage {
+    margin: 7.5px;
+    width: calc(40% - 15px);
+    height: auto;
+    box-sizing: border-box;
+    display: flex;
+}
+.petImage {
+    width:100%;
+    height: auto;
+    border-radius: 15px;
+}
+.nextToImage {
+    width: calc(60% - 15px);
+    padding: 7.5px;
+    box-sizing: border-box;
+}
+.nextToImage p {
+    padding-bottom: 7.5px;
+}
+.underTheImage {
+    width: 100%;
+    padding: 7.5px;
+    box-sizing: border-box;
+    display: flex;
+}
+.alongWithIcon {
+    height: max(1.4vw, 3.0vh);
+    width: auto;
+}
+.underUnderTheImage {
+    width: 100%;
+    padding: 7.5px;
+    box-sizing: border-box;
+}
+
+.browseElementFooter {
+    width: 100%;
+    text-align: center;
+    padding: 5px 0px;
+    background-color: var(--green);
+    border-radius: 0px 0px 15px 15px;
+    box-sizing: border-box;
+    font-size: max(0.8vw, 1.9vh);
+}
+
+
+/*For tablets*/
+@media only screen and (max-width: 768px) {
+    .browseElement {
+        width: calc(50% - 20px);
+    }
+}
+/*For phones*/
+@media only screen and (max-width: 426px) {
+    .browseElement {
+        width: calc(100% - 20px);
+    }
+}

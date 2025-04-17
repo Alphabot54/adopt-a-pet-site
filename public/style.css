@@ -1,0 +1,188 @@
+/*Color Pallet: https://coolors.co/palette/f0ead2-dde5b6-adc178-7b8f4b-a98467-6c584c-79675c-2F2723 */
+/*Font-family: Lexend Giga*/
+:root {
+    --white: #F0EAD2;
+    --light-brown: #A98467;
+    --dark-brown: #6C584C;
+    --grey-brown: #79675C;
+    --very-dark-brown: #2F2723;
+    --light-green: #DDE5B6;
+    --green: #ADC178;
+    --dark-green: #7B8F4B;
+}
+
+/*General*/
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    color: var(--very-dark-brown);
+}
+a {
+    width: 100%;
+    text-decoration: none;
+}
+/*
+a, input, form, label {
+    cursor: url('img/paw-cursor2.cur'), url('img/cursor.cur'), pointer;
+}
+html, body {
+    cursor: url('img/paw-cursor1.cur'), url('img/cursor.cur') , auto;
+}
+*/
+body {
+    display: flex;
+    flex-direction: column;
+    min-height: 100vh;
+    background-color: var(--white);
+    font-family: Lexend Giga;
+    font-weight: 600;
+}
+.centerContent {
+    align-items: center;
+}
+
+/*Header Section*/
+header {
+    background-color: var(--grey-brown);
+    display: flex;
+}
+#logoImage {
+    width: auto;
+    height: max(5vw, 10vh);
+}
+#dateTime {
+    text-align: right;
+    color: #ADC178;
+    padding: 2vh 2vw;
+    width: 30%;
+    font-size: max(1.2vw, 2.5vh);
+}
+
+main {
+    display: flex;
+    flex: 1;
+}
+/*Navigation Section*/
+nav {
+    width: 20%;
+    background-color: var(--light-brown);
+    padding: 16px;
+}
+ul {
+    display: flex;
+    flex-direction: column;
+    gap: 30px;
+    list-style-type: none;
+    margin: 0;
+    padding: 0;
+    width: 100%;
+}
+
+li a {
+    display: flex;
+    color: var(--dark-brown);
+    padding: 8px 16px;
+    text-decoration: none;
+    border-radius:  15px;
+    background-color: var(--green);
+    width: 100%;
+}
+li a:hover {
+    background-color: var(--grey-brown);
+    color: var(--light-green);
+}
+
+/*Main content*/
+.section {
+    width: 80%;
+    flex: 1;
+}
+.fullImage {
+    width: 100%;
+    height: auto;
+}
+.mainTitle {
+    padding: 5vh;
+    text-align: center;
+    font-size: 5vh;
+}
+.mainText {
+    padding: 5vh 5vw;
+    font-size: max(1.2vw, 2.5vh);
+}
+
+/*Footer Section*/
+footer {
+    background-color: var(--dark-green);
+    text-align: center;
+    padding: 1rem;
+}
+footer a {
+    text-decoration: none;
+    font-style: italic;
+}
+.disclaimerHidden {
+    display: none;
+    padding-top: 0.5vh;
+    font-size: max(0.8vw, 2vh);
+}
+#disclaimer:target {
+    display: block;
+}
+
+/*For contact.html*/
+.contactP {
+    background-color: var(--green);
+}
+.contactPTitle {
+    padding-top: 10vh;
+    padding-bottom: 10vh;
+}
+
+/*For tablets*/
+@media (max-width: 768px) {
+    main {
+        flex-direction: column;
+    }
+    nav {
+        width: 100%;
+        flex: 1;
+    }
+    .section {
+        width: 100%;
+    }
+    nav ul {
+        display: grid;
+        grid-template-columns: repeat(2, 1fr);
+        gap: 15px;
+        justify-items: center;
+    }
+    li {
+        width: 100%;
+    }
+}
+/*For phones*/
+@media (max-width: 426px) {
+    main {
+        flex-direction: column;
+    }
+    nav {
+        width: 100%;
+        flex: 1;
+    }
+    nav ul {
+        display: flex;
+    }
+    .section {
+        width: 100%;
+    }
+    header {
+        display: block;
+    }
+    #dateTime{
+        float: right;
+        width: 100%;
+        padding-top: 0;
+    }
+}

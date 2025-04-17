@@ -1,0 +1,100 @@
+/*colors*/
+:root {
+    --white: #F0EAD2;
+    --light-brown: #A98467;
+    --dark-brown: #6C584C;
+    --grey-brown: #79675C;
+    --very-dark-brown: #2F2723;
+    --light-green: #DDE5B6;
+    --green: #ADC178;
+    --dark-green: #7B8F4B;
+}
+
+/*Form styles*/
+.section {
+    align-items: center;
+    display: flex;
+    flex-direction: column;
+}
+form {
+    width: 80%;
+    padding: 5vh 5vw;
+    border-radius: 15px;
+    background-color: var(--light-green);
+    margin-bottom: 5vh;
+}
+label {
+    font-size: max(1.1vw, 2vh);
+}
+select {
+    width: 60%;
+    padding: 5px;
+    border: none;
+    border-radius: 15px;
+    background-color: var(--white);
+    border: 2px solid var(--dark-green);
+}
+input[type="reset"] {
+    background-color: var(--white);
+    color: var(--very-dark-brown);
+    border: 2px solid var(--dark-green);
+    border-radius: 5px;
+    padding: 5px;
+}
+input[type="reset"]:hover {
+    background-color: var(--green);
+}
+input[type="submit"] {
+    background-color: var(--white);
+    color: var(--very-dark-brown);
+    border: 2px solid var(--dark-green);
+    border-radius: 5px;
+    padding: 5px;
+}
+input[type="submit"]:hover {
+    background-color: var(--green);
+}
+textarea {
+    background-color: var(--white);
+    resize: none;
+    width: 100%;
+    border-radius: 5px;
+    border: 2px solid var(--dark-green);
+    padding: 5px;
+}
+input[type="text"], input[type="email"], input[type="password"], input[type="number"] {
+    background-color: var(--white);
+    width: 40%;
+    border-radius: 5px;
+    border: 2px solid var(--dark-green);
+    padding: 5px;
+}
+
+input[type="text"].logInput, input[type="password"] {
+    width: 100%;
+}
+.loginButton {
+    border-radius: 8px;
+    padding: 8px 32px;
+    font-size: max(1.1vw, 2vh);
+    background-color: var(--white);
+    color: var(--very-dark-brown);
+    border: 2px solid var(--dark-green);
+    font-family: Lexend Giga;
+    font-weight: 600;
+}
+.loginButton:hover {
+    background-color: var(--green);
+}
+#newAccountLink {
+    font-size: max(1.1vw, 2vh);
+    text-decoration: underline;
+    color: var(--dark-green);
+}
+#newAccountLink:hover {
+    color: var(--very-dark-brown);
+}
+.newAccountPrecisions {
+    font-style: italic;
+    font-size: max(0.8vw, 1.6vh);
+}
