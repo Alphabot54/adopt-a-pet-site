@@ -1,0 +1,75 @@
+<%-include('header.ejs') %>
+        <a href="https://labs.google/fx/tools/image-fx" target="_blank">
+            <div class="indexBackgroundImage">
+                <p class="IndexTitle">PAWS<br>FOR<br>LIFE</p>
+            </div>
+        </a>
+        <div>
+            <p class="mainText">
+                Welcome to <i>Paws & Love</i>!
+                <br><br>
+                At <i>Paws & Love</i>, we believe that every pet deserves a loving home, and every person deserves the joy of a furry companion. Whether you're looking to adopt a new best friend or need to find a caring home for a pet in need, we're here to help.
+                <br><br>
+                Our mission is to connect compassionate pet lovers with wonderful dogs and cats searching for their forever homes. Paws for Life is more than just a phrase—it's a promise of love, loyalty, and companionship that lasts a lifetime.
+            </p>
+        </div>
+        <div class="mainColor1">
+            <p class="mainTextTitle">
+                Find Your Perfect Companion
+            </p>
+            <p class="mainText">
+                Are you ready to welcome a pet into your home? Browse through our adoption listings and meet the many adorable pets waiting for a second chance. From playful puppies and kittens to mature pets looking for a cozy place to call home, there's a perfect match for everyone.
+            </p>
+        </div>
+        <div>
+            <p class="mainTextTitle">
+                Rehoming with Love & Care
+            </p>
+            <p class="mainText">
+                Sometimes, life brings unexpected changes, and finding a new home for your pet can be a difficult decision. We understand, and we're here to make the transition as smooth and stress-free as possible. Our platform ensures that your beloved pet finds a responsible and loving new family.
+            </p>
+        </div>
+        <div class="mainColor2">
+            <p class="mainTextTitle">
+                Resources for Pet Care
+            </p>
+            <p class="mainText">
+                Caring for a pet is a lifelong commitment, and we're here to support you every step of the way. Check out our dedicated pages on Dog Care and Cat Care for expert tips, advice, and guidance on training, nutrition, health, and more.
+            </p>
+        </div>
+        <div>
+            <p class="mainTextTitle">
+                Why Choose <i>Paws & Love</i>?
+            </p>
+            <ul  class="mainUnorderedList">
+                <li>
+                    A trusted community of pet lovers
+                </li>
+                <li>
+                    Simple and safe adoption & rehoming process
+                </li>
+                <li>
+                    Dedicated resources for pet care & well-being
+                </li>
+                <li>
+                    A commitment to lifelong companionship
+                </li>
+            </ul>
+        </div>
+        <div class="mainColor1">
+            <p class="mainText">
+                Join us in making a difference—one paw at a time. Start your journey with <i>Paws & Love</i> today!
+            </p>
+            <div class="centerContent">
+                <ul class="indexButtonsUl">
+                    <% if (isLogged) { %>
+                        <li><a href="/findPet">Find a Dog/Cat</a></li>
+                        <li><a href="/givePet">Give Away a Pet</a></li>
+                    <% } else { %>
+                        <li><a href="/login">Log In</a></li>
+                        <li><a href="/createAccount">Create Account</a></li>
+                    <% } %>
+                </ul>
+            </div>
+        </div>
+<%- include('footer.ejs') %>

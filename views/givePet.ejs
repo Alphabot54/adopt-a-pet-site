@@ -1,0 +1,75 @@
+<%-include('header.ejs') %>
+<p class="mainTitle">
+    Have a Pet to Give Away?
+</p>
+<form id="givePetForm" action="/givePet" method="post">
+    <% if (typeof message !== 'undefined') { %>
+        <p class="newAccountPrecisions"><%= message %></p>
+        <br>
+    <% } %>
+    <!--Cat or Dog-->
+    <label>Type: </label>
+    <input type="radio" id="dogChoice" name="animalChoice" value="dog" required>
+    <label for="dogChoice">Dog</label>
+    <input type="radio" id="catChoice" name="animalChoice" value="cat" required>
+    <label for="catChoice">Cat</label>
+    <br><br>
+    <!--Breed-->
+    <label for="animalBreed">Breed: </label>
+    <select name="animalBreed" id="animalBreed" required>
+        <option value="" selected disabled>Choose an Option</option>
+        <option value="German Shepherd">Dog - German Shepherd</option>
+        <option value="Bulldog">Dog - Bulldog</option>
+        <option value="Golden Retriever">Dog - Golden Retriever</option>
+        <option value="Mixed">Dog - Mixed</option>
+        <option value="Siamese">Cat - Siamese</option>
+        <option value="British Shorthair">Cat - British Shorthair</option>
+        <option value="Persian">Cat - Persian</option>
+        <option value="Mixed">Cat - Mixed</option>
+    </select>
+    <br><br>
+    <!--Age-->
+    <label for="animalAge">Age: </label>
+    <input type="number" name="animalAge" id="animalAge" min="0" max="100" required>
+    <br><br>
+    <!--Gender-->
+    <label>Gender: </label>
+    <input type="radio" id="maleChoice" name="genderChoice" value="male" required>
+    <label for="maleChoice">Male</label>
+    <input type="radio" id="femaleChoice" name="genderChoice" value="female" required>
+    <label for="femaleChoice">Female</label>
+    <br><br>
+    <!--Needs to get along-->
+    <label>Gets along with: </label>
+    <input type="checkbox" id="otherDogsChoice" name="getAlongWith[]" value="otherDogs">
+    <label for="otherDogsChoice">Other Dogs</label>
+    <input type="checkbox" id="otherCatsChoice" name="getAlongWith[]" value="otherCats">
+    <label for="otherCatsChoice">Other Cats</label>
+    <input type="checkbox" id="smallChildChoice" name="getAlongWith[]" value="smallChildren">
+    <label for="smallChildChoice">Small Children</label>
+    <br><br>
+    <!--Comment Section-->
+    <label for="comments">Comments</label>
+    <br>
+    <textarea name="comments" id="comments" title="Brag about your Animal Here!"></textarea>
+    <br><br>
+    <!--Animal Name-->
+    <label for="animalName">Pet Name: </label>
+    <input type="text" name="animalName" id="animalName" required>
+    <br><br>
+    <!--Owner Name-->
+    <label for="ownerFirstName">Owner First Name:</label>
+    <input type="text" name="ownerFirstName" id="ownerFirstName" autocomplete="given-name, name" required>
+    <br><br>
+    <label for="ownerLastName">Owner Last Name:</label>
+    <input type="text" name="ownerLastName" id="ownerLastName" autocomplete="family-name" required>
+    <br><br>
+    <!--Owner email-->
+    <label for="email">Email: </label>
+    <input type="email" name="email" id="email" pattern="(^[a-zA-Z0-9._%+-]+@[a-zA-Z0-9.-]+\.[a-zA-Z]{2,}$)" autocomplete="email" required>
+    <br><br>
+    <!--Submit and Clear-->
+    <input type="submit" value="Give Pet" name="submit-form">
+    <input type="reset" value="Clear" name="reset-form">
+</form>
+<%- include('footer.ejs') %>

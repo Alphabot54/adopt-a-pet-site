@@ -1,0 +1,25 @@
+<%- include('header') %>
+<p class="mainTitle">
+    Login
+</p>
+<form action="/login" method="post">
+    <% if (typeof message !== 'undefined') { %>
+        <p class="newAccountPrecisions"><%= message %></p>
+        <br>
+    <% } %>
+    <label for="username">Username</label>
+    <br>
+    <input type="text" name="username" id="username" class="logInput" autocomplete="username" title="Remember, only letters and digits ;)" pattern="(^[a-zA-Z0-9]{1,30}$)" required>
+    <br>
+    <br>
+    <label for="password">Password</label>
+    <br>
+    <input type="password" name="password" id="password" class="logInput" title="Hopefully, you didn't forget this..." autocomplete="current-password" required>
+    <br>
+    <br>
+    <button type="submit" class="loginButton">Login</button>
+    <br>
+    <br>
+    <a href="/createAccount" id="newAccountLink">Don't have an account? Create a new one here!</a>
+</form>
+<%- include('footer') %>

@@ -1,0 +1,40 @@
+<!--Written by Adrian Charbonneau-->
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Paws & Love - <%= title %></title>
+    <link rel="icon" href="img/small_logo-removebg-preview.png">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Lexend+Giga:wght@100..900&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="style.css">
+    <link rel="stylesheet" href="<%= style %>">
+</head>
+<body>
+<header>
+    <a href="/">
+        <img id="logoImage" src="img/Home_logo.png" alt="Home logo">
+    </a>
+    <div id="dateTime"></div>
+</header>
+<main>
+    <nav>
+        <ul>
+            <li><a href="/">Home</a></li>
+            <% if (isLogged) { %>
+                <li><a href="/logout">Log Out</a></li>
+            <% } else { %>
+                <li><a href="/login">Log In</a></li>
+                <li><a href="/createAccount">Create Account</a></li>
+            <% } %>
+            <li><a href="/findPet">Find a Dog/Cat</a></li>
+            <li><a href="/givePet">Give Away a Pet</a></li>
+            <li><a href="/dogCare">Dog Care</a></li>
+            <li><a href="/catCare">Cat Care</a></li>
+            <li><a href="/contact">Contact Us</a></li>
+            
+        </ul>
+    </nav>
+    <div class="section">

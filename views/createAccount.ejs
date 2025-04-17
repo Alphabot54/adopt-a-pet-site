@@ -1,0 +1,29 @@
+<%- include('header') %>
+<p class="mainTitle">
+    Create a New Account
+</p>
+<form action="/createAccount" method="post">
+    <% if (typeof message !== 'undefined') { %>
+        <p class="newAccountPrecisions"><%= message %></p>
+        <br>
+    <% } %>
+    <label for="username">Username</label>
+    <br>
+    <input type="text" name="username" id="username" class="logInput" title="Max 30 characters. Only letters and digits" autocomplete="username" pattern="(^[a-zA-Z0-9]{1,30}$)" required>
+    <br>
+    <p class="newAccountPrecisions">Username and password must contain letters and digits only.</p>
+    <br>
+    <label for="password">Password</label>
+    <br>
+    <input type="password" name="password" id="password" class="logInput" title="Min 4 characters: 1 letter and 1 digit." pattern="(^(?=.*[A-Za-z])(?=.*\d)[A-Za-z\d]{4,}$)" autocomplete="current-password" required>
+    <br>
+    <p class="newAccountPrecisions">Password must be at least 4 characters long, have at least one letter and at least one digit.</p>
+    <br>
+    <label for="checkPassword">Re-Enter Password</label>
+    <br>
+    <input type="password" name="checkPassword" id="checkPassword" class="logInput" title="Min 4 characters: 1 letter and 1 digit." pattern="(^(?=.*[A-Za-z])(?=.*\d)[A-Za-z\d]{4,}$)" autocomplete="current-password" required>
+    <br>
+    <br>
+    <button type="submit" class="loginButton">Create Account!</button>
+</form>
+<%- include('footer') %>

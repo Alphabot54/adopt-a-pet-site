@@ -1,0 +1,63 @@
+<%-include('header.ejs') %>
+<p class="mainTitle">
+    Find a Dog/Cat
+</p>
+<form id="findPetForm" action="/findPet" method="post">
+    <!--Cat or Dog-->
+    <label>Type: </label>
+    <input type="radio" id="dogChoice" name="animalChoice" value="dog" required>
+    <label for="dogChoice">Dog</label>
+    <input type="radio" id="catChoice" name="animalChoice" value="cat" required>
+    <label for="catChoice">Cat</label>
+    <input type="radio" id="noChoice" name="animalChoice" value="none" required>
+    <label for="noChoice">Doesn't Matter</label>
+    <br><br>
+    <!--Breed-->
+    <label for="animalBreed">Breed: </label>
+    <select name="animalBreed" id="animalBreed" required>
+        <option value="" selected disabled>Choose an Option</option>
+        <option value="German Shepherd">Dog - German Shepherd</option>
+        <option value="Bulldog">Dog - Bulldog</option>
+        <option value="Golden Retriever">Dog - Golden Retriever</option>
+        <option value="Siamese">Cat - Siamese</option>
+        <option value="British Shorthair">Cat - British Shorthair</option>
+        <option value="Persian">Cat - Persian</option>
+        <option value="Mixed">Any - Mixed</option>
+        <option value="none">Doesn't Matter</option>
+    </select>
+    <br><br>
+    <!--Age-->
+    <label for="animalAge">Age: </label>
+    <select name="animalAge" id="animalAge" required>
+        <option value="" selected disabled>Choose an Option</option>
+        <option value="ZeroToOne">0 - 1 years old</option>
+        <option value="OneToThree">1 - 3 years old</option>
+        <option value="ThreeToFive">3 - 5 years old</option>
+        <option value="FiveToTen">5 - 10 years old</option>
+        <option value="TenPlus">10+ years old</option>
+        <option value="none">Doesn't Matter</option>
+    </select>
+    <br><br>
+    <!--Gender-->
+    <label>Gender: </label>
+    <input type="radio" id="maleChoice" name="genderChoice" value="male" required>
+    <label for="maleChoice">Male</label>
+    <input type="radio" id="femaleChoice" name="genderChoice" value="female" required>
+    <label for="femaleChoice">Female</label>
+    <input type="radio" id="noGenderChoice" name="genderChoice" value="none" required>
+    <label for="noGenderChoice">Doesn't Matter</label>
+    <br><br>
+    <!--Needs to get along-->
+    <label>Needs to get along with: </label>
+    <input type="checkbox" id="otherDogsChoice" name="getAlongWith[]" value="otherDogs">
+    <label for="otherDogsChoice">Other Dogs</label>
+    <input type="checkbox" id="otherCatsChoice" name="getAlongWith[]" value="otherCats">
+    <label for="otherCatsChoice">Other Cats</label>
+    <input type="checkbox" id="smallChildChoice" name="getAlongWith[]" value="smallChildren">
+    <label for="smallChildChoice">Small Children</label>
+    <br><br>
+    <!--Submit and Clear-->
+    <input type="submit" value="Find Pet" name="submit-form">
+    <input type="reset" value="Clear" name="reset-form">
+</form>
+<%- include('footer.ejs') %>

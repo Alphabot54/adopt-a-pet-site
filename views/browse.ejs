@@ -1,0 +1,56 @@
+<%- include('header.ejs') %>
+<div id="browseSection">
+    <% if(typeof pets === 'undefined' || pets.length == 0) { %>
+        <a href="https://labs.google/fx/tools/image-fx" target="_blank">
+            <div class="centerContent">
+                <img class="underConstructionImage" src="img/backgroundPetsNotFound.jpg" alt="No Pets to Display">
+            </div>
+        </a>
+    <% } else { pets.forEach(pet => { %>
+        <div class="browseElement">
+            <div class="browseElementHeader">
+                <div class="petName"><%= pet.animalName %></div>
+                <div class="gender">
+                    <% if(pet.genderChoice == 'male') { %>
+                        <img src="img/male_icon.png" alt="Gender icon" class="genderIcon">
+                    <% } else { %>
+                        <img src="img/female_icon.png" alt="Gender icon" class="genderIcon">
+                    <% } %>
+                    <img src="img/brown_heart_icon.png" alt="favourite icon" class="heartIcon" id="loved<%= pet.id %>" onclick="changeLove(this)">
+                </div>
+            </div>
+            <div class="browseElementBody">
+                <div class="isTheImage">
+                    <img src="<%= pet.image %>" alt="<%= pet.animalBreed %>" class="petImage" onerror="this.onerror=null; this.src='img/petnotFound.jpg';">
+                </div>
+                <div class="nextToImage">
+                    <p><%= pet.animalBreed %></p>
+                    <p><%= pet.animalAge %> years old</p>
+                </div>
+            </div>
+            <div class="browseElementBody">
+                <div class="underTheImage">
+                    <p>Gets Along...</p>
+                    <% if(pet.getAlongWith.includes("otherDogs")) { %>
+                        <img src="img/dog_icon.png" alt="dog icon" class="alongWithIcon">
+                    <% } if(pet.getAlongWith.includes("otherCats")) { %>
+                        <img src="img/cat_icon.png" alt="cat icon" class="alongWithIcon">
+                    <% } if(pet.getAlongWith.includes("smallChildren")) { %>
+                        <img src="img/baby_icon.png" alt="baby icon" class="alongWithIcon">
+                    <% } %>
+                </div>
+            </div>
+            <div class="browseElementBody">
+                <div class="underUnderTheImage">
+                    <p>Contact Owner: </p>
+                    <p><%= pet.ownerFirstName + ' ' + pet.ownerLastName %></p>
+                    <p><%= pet.email %></p>
+                </div>
+            </div>
+            <div class="browseElementFooter">
+                <p>"<%= pet.comments %>"</p>
+            </div>
+        </div>
+    <% })} %>
+</div>
+<%- include('footer.ejs') %>

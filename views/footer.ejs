@@ -1,0 +1,53 @@
+</div>
+</main>
+<footer>
+    <p>
+        &copy;Paws&Love2025 <a href="#disclaimer">Disclaimer</a>
+    </p>
+    <p id="disclaimer" class="disclaimerHidden">
+        We will never misuse or sell your information. We are also not liable for any incorrect information posted by pet owners and so on.
+    </p>
+</footer>
+
+<script src="script.js"></script>
+
+<% if (typeof logoutMessage !== 'undefined') { %>
+    <script>
+        alert("<%= logoutMessage %>");
+        //to prevent alert triggering after reload
+        window.history.replaceState({}, document.title, '/');
+    </script>
+<% } %>
+<% if (typeof loginMessage !== 'undefined') { %>
+    <script>
+        alert("<%= loginMessage %>");
+        //to prevent alert triggering after reload
+        window.history.replaceState({}, document.title, '/');
+    </script>
+<% } %>
+<% if (typeof petAdded !== 'undefined') { %>
+    <script>
+        alert("<%= petAdded %>");
+        //to prevent alert triggering after reload
+        window.history.replaceState({}, document.title, '/');
+    </script>
+<% } %>
+<% if (typeof pets !== 'undefined') { %>
+    <script>
+        // changes the color of the heart icon on each pet card when clicked
+        function changeLove(image) {
+            if (image.src.includes('brown_heart_icon.png')) {
+                image.src = 'img/red_heart_icon.png';
+            } else {
+                image.src = 'img/brown_heart_icon.png';
+            }
+        }
+    </script>
+<% } %>
+<% if (typeof message !== 'undefined') { %>
+    <script>
+        window.history.replaceState({}, document.title, '/givePet');
+    </script>
+<% } %>
+</body>
+</html>
