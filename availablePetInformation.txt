@@ -1,0 +1,12 @@
+1:admin:dog:German Shepherd:3:male:otherDogs:Very energetic and loyal.:Max:John:Doe:john.doe@email.com:browseImg/stock_browse_00.jpg
+2:admin:cat:Siamese:1:female:otherCats,smallChildren:Loves to cuddle and play.:Bella:Jane:Smith:jane.smith@email.com:browseImg/stock_browse_01.jpg
+3:admin:dog:Golden Retriever:4:female:otherCats,otherDogs,smallChildren:Gentle and friendly with everyone.:Lucy:Sarah:Johnson:sarah.johnson@email.com:browseImg/stock_browse_02.jpg
+4:admin:cat:British Shorthair:2:male:otherCats:Independent and playful.:Oliver:Michael:Brown:michael.brown@email.com:browseImg/stock_browse_03.jpg
+5:admin:dog:Bulldog:5:male:otherDogs:Lazy but loves attention.:Rocky:David:Williams:david.williams@email.com:browseImg/stock_browse_04.jpg
+6:admin:dog:Mixed:12:female::Calm and loves relaxing.:Sadie:Emily:Jones:emily.jones@email.com:browseImg/stock_browse_05.jpg
+7:admin:cat:Persian:3:female:otherCats,smallChildren:Friendly and quiet.:Luna:Chris:Davis:chris.davis@email.com:browseImg/stock_browse_06.jpg
+8:admin:dog:Mixed:1:male:otherDogs:Playful and loves to run.:Charlie:Andrew:Martinez:andrew.martinez@email.com:browseImg/stock_browse_07.jpg
+9:admin:cat:Mixed:8:female:smallChildren:Loves attention but independent.:Whiskers:Jessica:Taylor:jessica.taylor@email.com:browseImg/stock_browse_08.jpg
+10:admin:cat:Mixed:4:female:otherCats,smallChildren:She is kind and gentle ;):Princess:Donald:Trump:dtrump@president.gov:olderPetImg/cm2.jpg
+11:bob:dog:Golden Retriever:0:male:smallChildren:Beautiful dog and super cute!:Romeo:Juliette:Laronde:juliette.and.romeo@loved.com:youngerPetImg/dgr1.jpg
+12:admin:cat:Persian:100:male:smallChildren:Smells Bad... We tried washing it.:Stinky:Smell:Good:dontlikestinky@perfume.com:olderPetImg/cp1.jpg
